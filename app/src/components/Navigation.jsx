@@ -4,6 +4,7 @@ function Navigation() {
       <div className="flex w-4/5">
         <img 
           src="https://dev.lilly.com/img/logo.svg"
+          alt="Lilly Logo"
           width={50}
           height={50}
           className="mx-5"
