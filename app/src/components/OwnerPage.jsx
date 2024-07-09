@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Checklist from "./Checklist.jsx"
 
 function OwnerPage() {
   const [items, setItems] = useState([]);
@@ -100,6 +101,7 @@ function OwnerPage() {
           </li>
         ))}
       </ul>
+      <Checklist />
     </div>
   );
 }
