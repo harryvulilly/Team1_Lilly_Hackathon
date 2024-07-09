@@ -1,7 +1,15 @@
+import Navigation from "./components/Navigation";
+import Welcome from "./components/Welcome";
+
 function App() {
   return (
-    <div>
-      <h1>Test</h1>
+    <div className="min-h-screen">
+      <Navigation />
+      <Welcome />
+
+      {/* To Be Done */}
+      {/* <OwnerPage />
+      <NewHirePage /> */}
     </div>
   );
 }
