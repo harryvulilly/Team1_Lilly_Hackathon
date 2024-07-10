@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Checklist from "./Checklist.jsx";
+import imageUrl from '../send.png'; // Import the image
+import imageUrlSent from '../sent.png'; // Import the image
+
 
 function OwnerPage() {
   const [items, setItems] = useState([]);
   const [buttonVisibility, setButtonVisibility] = useState("visible");
   const [searchTerm, setSearchTerm] = useState("");
-  const [sendText, setSendText] = useState("Finished editing?");
+  const [sendText, setSendText] = useState("");
   const [checklistData, setChecklistData] = useState({});
 
   const employee = "Ellie";
@@ -227,26 +230,6 @@ function OwnerPage() {
             {filteredAdditionalOptions.length === 0 && searchTerm && (
               <div>
                 <p className="mb-2">No matches found. Add a new option:</p>
-                <div>
-                  <label htmlFor="newDefinition" className="block">Definition:</label>
-                  <textarea
-                    id="newDefinition"
-                    value={newDefinition}
-                    onChange={handleNewDefinitionChange}
-                    className="border px-2 py-1 w-full mb-2 text-black"
-                    rows="4"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="newLink" className="block">Link:</label>
-                  <textarea
-                    id="newLink"
-                    value={newLink}
-                    onChange={handleNewLinkChange}
-                    className="border px-2 py-1 w-full mb-2 text-black"
-                    rows="2"
-                  />
-                </div>
                 <button
                   className="bg-blue-500 text-white px-4 py-2 rounded"
                   onClick={addNewOption}
@@ -266,12 +249,13 @@ function OwnerPage() {
         <div>
           {buttonVisibility === 'visible' && (
             <button
-              className="border-[1px] p-2.5 rounded-2xl text-xl"
+              className="bg-white border-[1px] p-2.5 rounded-2xl text-xl text-black"
               onClick={(e) => handleSendButton(e)}
             >
-              Send to ellie.isnew@lilly.com!
+              <img src={imageUrl} width={100} height={100}/>
+              Send
             </button>
-          )}
+          )} {buttonVisibility === 'hidden' && (<img src = {imageUrlSent} width={100} height={100} />)}
         </div>
       </div>
     </div>
