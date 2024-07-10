@@ -28,11 +28,11 @@ function OwnerPage() {
   ];
 
   const [optionLinks, setOptionLinks] = useState({
-    "Confluence": "https://lilly-confluence.atlassian.net/wiki",
-    "Jira": "link",
-    "Github": "link",
-    "VSCode": "link",
-    "Biologica": "link",
+    Confluence: "https://lilly-confluence.atlassian.net/wiki",
+    Jira: "link",
+    Github: "link",
+    VSCode: "link",
+    Biologica: "link",
     "Option 4": "link",
     "Option 5": "link",
     "Option 6": "link",
@@ -43,11 +43,12 @@ function OwnerPage() {
   });
 
   const [optionDefinitions, setOptionDefinitions] = useState({
-    "Confluence": "A collaboration tool used for project management.",
-    "Jira": "A tool used for issue and project tracking.",
-    "Github": "A platform for version control and collaboration.",
-    "VSCode": "A source-code editor made by Microsoft.",
-    "Biologica": "Biological instructions and data management tool.\nStart here and install!",
+    Confluence: "A collaboration tool used for project management.",
+    Jira: "A tool used for issue and project tracking.",
+    Github: "A platform for version control and collaboration.",
+    VSCode: "A source-code editor made by Microsoft.",
+    Biologica:
+      "Biological instructions and data management tool.\nStart here and install!",
     "Option 4": "Additional option 4 definition.",
     "Option 5": "Additional option 5 definition.",
     "Option 6": "Additional option 6 definition.",
@@ -64,15 +65,15 @@ function OwnerPage() {
 
   const addItem = (item) => {
     setItems([...items, item]);
-    setChecklistData(prevChecklistData => ({
+    setChecklistData((prevChecklistData) => ({
       ...prevChecklistData,
-      [item]: [optionDefinitions[item], optionLinks[item]]
+      [item]: [optionDefinitions[item], optionLinks[item]],
     }));
   };
 
   const removeItem = (item) => {
     setItems(items.filter((i) => i !== item));
-    setChecklistData(prevChecklistData => {
+    setChecklistData((prevChecklistData) => {
       const updatedChecklistData = { ...prevChecklistData };
       delete updatedChecklistData[item];
       return updatedChecklistData;
@@ -100,13 +101,13 @@ function OwnerPage() {
   };
 
   const addNewOption = () => {
-    setOptionDefinitions(prevDefinitions => ({
+    setOptionDefinitions((prevDefinitions) => ({
       ...prevDefinitions,
-      [searchTerm]: newDefinition
+      [searchTerm]: newDefinition,
     }));
-    setOptionLinks(prevLinks => ({
+    setOptionLinks((prevLinks) => ({
       ...prevLinks,
-      [searchTerm]: newLink
+      [searchTerm]: newLink,
     }));
     addItem(searchTerm);
     setNewOption("");
@@ -121,24 +122,24 @@ function OwnerPage() {
     : [];
 
   const handleDefinitionChange = (item, newDefinition) => {
-    setOptionDefinitions(prevDefinitions => ({
+    setOptionDefinitions((prevDefinitions) => ({
       ...prevDefinitions,
-      [item]: newDefinition
+      [item]: newDefinition,
     }));
-    setChecklistData(prevChecklistData => ({
+    setChecklistData((prevChecklistData) => ({
       ...prevChecklistData,
-      [item]: [newDefinition, optionLinks[item]]
+      [item]: [newDefinition, optionLinks[item]],
     }));
   };
 
   const handleLinkChange = (item, newLink) => {
-    setOptionLinks(prevLinks => ({
+    setOptionLinks((prevLinks) => ({
       ...prevLinks,
-      [item]: newLink
+      [item]: newLink,
     }));
-    setChecklistData(prevChecklistData => ({
+    setChecklistData((prevChecklistData) => ({
       ...prevChecklistData,
-      [item]: [optionDefinitions[item], newLink]
+      [item]: [optionDefinitions[item], newLink],
     }));
   };
 
@@ -147,7 +148,9 @@ function OwnerPage() {
       <h2 className="text-2xl font-bold mb-4">Owner Page: Select Access</h2>
       <h3> Employee: {employee} </h3>
       <h3> Employee email: ellie.isnew@lilly.com </h3>
-      <h4>Instructions: Select technologies and preview what {employee} will see! </h4>
+      <h4>
+        Instructions: Select technologies and preview what {employee} will see!{" "}
+      </h4>
       <div className="flex flex-row">
         <div className="flex-1 mr-8">
           <h3 className="text-xl font-bold mb-4">Selected: </h3>
@@ -160,7 +163,7 @@ function OwnerPage() {
                 >
                   - {item}
                 </button>
-              
+
                 <div>
                   <label htmlFor={`link-${item}`}> Link: </label>
                 </div>
@@ -182,7 +185,9 @@ function OwnerPage() {
                     type="text"
                     id={`definition-${item}`}
                     value={optionDefinitions[item]}
-                    onChange={(e) => handleDefinitionChange(item, e.target.value)}
+                    onChange={(e) =>
+                      handleDefinitionChange(item, e.target.value)
+                    }
                     className="border px-2 py-1 w-full text-black"
                     rows="3"
                   />
@@ -228,7 +233,9 @@ function OwnerPage() {
               <div>
                 <p className="mb-2">No matches found. Add a new option:</p>
                 <div>
-                  <label htmlFor="newDefinition" className="block">Definition:</label>
+                  <label htmlFor="newDefinition" className="block">
+                    Definition:
+                  </label>
                   <textarea
                     id="newDefinition"
                     value={newDefinition}
@@ -238,7 +245,9 @@ function OwnerPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="newLink" className="block">Link:</label>
+                  <label htmlFor="newLink" className="block">
+                    Link:
+                  </label>
                   <textarea
                     id="newLink"
                     value={newLink}
@@ -264,7 +273,7 @@ function OwnerPage() {
       <div className="pt-5 flex justify-center">
         {sendText}
         <div>
-          {buttonVisibility === 'visible' && (
+          {buttonVisibility === "visible" && (
             <button
               className="border-[1px] p-2.5 rounded-2xl text-xl"
               onClick={(e) => handleSendButton(e)}
