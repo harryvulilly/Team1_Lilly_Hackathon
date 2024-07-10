@@ -9,7 +9,11 @@ function Welcome() {
 
   return (
     <main className={`${visible} flex flex-col justify-center min-h-screen`}>
-      <div className="py-4">
+      <img 
+        src="https://cdn.thepharmaletter.com/files/2022/12/819984c0-74c3-11ed-8ccd-df2a7a949035-eli_lilly_science_large.jpg"
+        className="opacity-50 fixed -z-10 w-screen h-screen blur-md"
+      />
+      <div className="py-4 z-10">
         <h1 className="text-5xl text-center">New Employee Resources</h1>
         <h2 className="pt-5 w-8/12 mx-auto text-3xl text-center">
           One stop shop for new employees
