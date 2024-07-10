@@ -21,13 +21,13 @@ function OwnerPage() {
   ];
 
   const additionalOptions = [
-    "Option 4",
-    "Option 5",
-    "Option 6",
-    "Option 7",
-    "Option 8",
-    "Option 9",
-    "Option 10",
+    "JFrog Artifactory",
+    "Xray Platform",
+    "HPC Artifactory",
+    "Docker Desktop",
+    "Postgres DB",
+    "AWS",
+    "PGAdmin",
   ];
 
   const [optionLinks, setOptionLinks] = useState({
@@ -36,13 +36,13 @@ function OwnerPage() {
     "Github": "link",
     "VSCode": "link",
     "Biologica": "link",
-    "Option 4": "link",
-    "Option 5": "link",
-    "Option 6": "link",
-    "Option 7": "link",
-    "Option 8": "link",
-    "Option 9": "link",
-    "Option 10": "link",
+    "JFrog Artifactory": "link",
+    "Xray Platform": "link",
+    "HPC Artifactory": "link",
+    "Docker Desktop": "link",
+    "Postgres DB": "link",
+    "AWS": "link",
+    "PGAdmin": "link",
   });
 
   const [optionDefinitions, setOptionDefinitions] = useState({
@@ -51,13 +51,13 @@ function OwnerPage() {
     "Github": "A platform for version control and collaboration.",
     "VSCode": "A source-code editor made by Microsoft.",
     "Biologica": "Biological instructions and data management tool.\nStart here and install!",
-    "Option 4": "Additional option 4 definition.",
-    "Option 5": "Additional option 5 definition.",
-    "Option 6": "Additional option 6 definition.",
-    "Option 7": "Additional option 7 definition.",
-    "Option 8": "Additional option 8 definition.",
-    "Option 9": "Additional option 9 definition.",
-    "Option 10": "Additional option 10 definition.",
+    "JFrog Artifactory": "Additional option 4 definition.",
+    "Xray Platform": "Additional option 5 definition.",
+    "HPC Artifactory": "Additional option 6 definition.",
+    "Docker Desktop": "Additional option 7 definition.",
+    "Postgres DB": "Additional option 8 definition.",
+    "AWS": "Additional option 9 definition.",
+    "PGAdmin": "Additional option 10 definition.",
   });
 
   function handleSendButton(e) {
