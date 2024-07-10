@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Checklist from "./Checklist.jsx"
+import Checklist from "./Checklist.jsx";
 
 function OwnerPage() {
   const [items, setItems] = useState([]);
@@ -39,7 +39,7 @@ function OwnerPage() {
 
   const filteredAdditionalOptions = searchTerm
     ? additionalOptions.filter((option) =>
-        option.toLowerCase().includes(searchTerm.toLowerCase())
+        option.toLowerCase().includes(searchTerm.toLowerCase()),
       )
     : [];
   return (
@@ -49,7 +49,9 @@ function OwnerPage() {
       <h3 className="text-xl font-bold mb-4">Selected: </h3>
       <ul className="list-disc pl-8 mb-4">
         {items.map((item, index) => (
-          <li key={index} className="mb-2">{item}</li>
+          <li key={index} className="mb-2">
+            {item}
+          </li>
         ))}
       </ul>
 
