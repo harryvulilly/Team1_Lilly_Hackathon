@@ -16,10 +16,10 @@ function OwnerPage() {
     "Jira",
     "Github",
     "VSCode",
-    "Biologica",
   ];
 
   const additionalOptions = [
+    "Biologica",
     "JFrog Artifactory",
     "Xray Platform",
     "HPC Artifactory",
@@ -31,10 +31,10 @@ function OwnerPage() {
 
   const [optionLinks, setOptionLinks] = useState({
     "Confluence": "https://lilly-confluence.atlassian.net/wiki",
-    "Jira": "link",
-    "Github": "link",
+    "Jira": "https://lilly-jira.atlassian.net/wiki",
+    "Github": "https://github.com/EliLillyCo",
     "VSCode": "link",
-    "Biologica": "link",
+    "Biologica": "https://biologica.am.lilly.com",
     "JFrog Artifactory": "link",
     "Xray Platform": "link",
     "HPC Artifactory": "link",
@@ -45,11 +45,11 @@ function OwnerPage() {
   });
 
   const [optionDefinitions, setOptionDefinitions] = useState({
-    "Confluence": "A collaboration tool used for project management.",
+    "Confluence": "A collaboration tool used for project management. \nEmail Peter Hillier asking to join the Confluence workspace.",
     "Jira": "A tool used for issue and project tracking.",
-    "Github": "A platform for version control and collaboration.",
+    "Github": "A platform for version control and collaboration. \nRequest access to our organizational GitHub, using your Lilly email. ",
     "VSCode": "A source-code editor made by Microsoft.",
-    "Biologica": "Biological instructions and data management tool.\nStart here and install!",
+    "Biologica": "Biological data management tool.\nRequest access at the link above. You will need to wait 1-2 days for approval",
     "JFrog Artifactory": "Additional option 4 definition.",
     "Xray Platform": "Additional option 5 definition.",
     "HPC Artifactory": "Additional option 6 definition.",
