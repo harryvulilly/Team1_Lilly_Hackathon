@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Checklist from "./Checklist.jsx";
-import imageUrl from '../send.png'; // Import the image
-import imageUrlSent from '../sent.png'; // Import the image
-
+import imageUrl from "../send.png"; // Import the image
+import imageUrlSent from "../sent.png"; // Import the image
 
 function OwnerPage() {
   const [items, setItems] = useState([]);
@@ -152,7 +151,9 @@ function OwnerPage() {
       <h3> Employee: {employee} </h3>
       <h3> Employee email: ellie.isnew@lilly.com </h3>
       <h3> Employee start date: 07/15/2024 </h3>
-      <h4>Instructions: Select technologies and preview what {employee} will see! </h4>
+      <h4>
+        Instructions: Select technologies and preview what {employee} will see!{" "}
+      </h4>
       <div className="flex flex-row">
         <div className="flex-1 mr-8">
           <h3 className="text-xl font-bold mb-4">Selected: </h3>
@@ -255,12 +256,14 @@ function OwnerPage() {
               className="bg-white border-[1px] p-2.5 rounded-2xl text-xl text-black"
               onClick={(e) => handleSendButton(e)}
             >
-              <img src={imageUrl} width={100} height={100}/>
+              <img src={imageUrl} width={100} height={100} />
               Send
             </button>
-          )} {buttonVisibility === 'hidden' && (<img src = {imageUrlSent} width={100} height={100} />)}
-          <div>        {sendText}
-          </div>
+          )}{" "}
+          {buttonVisibility === "hidden" && (
+            <img src={imageUrlSent} width={100} height={100} />
+          )}
+          <div> {sendText}</div>
         </div>
       </div>
     </div>
