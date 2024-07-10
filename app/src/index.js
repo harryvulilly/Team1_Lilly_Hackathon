@@ -7,6 +7,7 @@ import SignInPage from "./components/SignInPage";
 import DefaultPage from "./components/DefaultPage";
 import OwnerPage from "./components/OwnerPage";
 import NewHirePage from "./components/NewHire/NewHirePage";
+import TemplateHistory from "./components/NewHire/TemplateHistory";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/home/new-hire",
     element: <NewHirePage />,
+  },
+  {
+    path: "home/new-hire/templates",
+    element: <TemplateHistory />,
   },
 ]);
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import Navigation from "../Navigation";
 import GeneralNewHire from "./GeneralNewHire";
+import { Link } from "react-router-dom";
 
 const exampleTemplates = [
   {
@@ -173,6 +174,15 @@ function NewHirePage() {
               })}
             </ul>
           )}
+
+          <div className="flex justify-end mt-2.5">
+            <Link
+              to="templates"
+              className="bg-transparent hover:bg-[#eae5e3] hover:border-black text-black font-semibold hover:text-black py-2 px-4 border border-[#000000] hover:border-transparent rounded"
+            >
+              Show All
+            </Link>
+          </div>
         </div>
 
         <br />
@@ -231,7 +241,7 @@ function NewHirePage() {
                 Save
               </button>
               <button
-                className="w-24 mr-2.5 bg-transparent hover:bg-[#eae5e3] hover:border-black text-black font-semibold hover:text-black py-2 px-4 border border-[#000000] hover:border-transparent rounded"
+                className="w-24 ml-2.5 bg-transparent hover:bg-[#eae5e3] hover:border-black text-black font-semibold hover:text-black py-2 px-4 border border-[#000000] hover:border-transparent rounded"
                 onClick={() => handleCancel()}
               >
                 Cancel
