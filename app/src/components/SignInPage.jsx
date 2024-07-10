@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -41,7 +41,7 @@ function SignInPage() {
         className="opacity-50 fixed -z-10 w-screen h-screen blur-md"
       />
       <div className="flex flex-col bg-white text-[#000000] w-1/3 py-5 px-10 rounded-lg">
-        <label className="text-3xl text-center">Welcome</label>
+        <label className="text-3xl text-center">Welcome to Lilly!</label>
 
         <label htmlFor="email" className="text-xl">
           Lilly Email
