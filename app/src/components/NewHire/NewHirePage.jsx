@@ -142,11 +142,11 @@ function NewHirePage() {
                       onChange={(e) => handleSetComplete(e.target.checked)}
                       type="checkbox"
                       id={`${action.tool}-checkbox`}
-                      className="w-5 h-5 accent-blue-400 text-white cursor-pointer"
+                      className="w-5 h-5 accent-blue-400 text-white cursor-pointer text-xl"
                     />
                     <label
                       htmlFor={`${action.tool}-checkbox`}
-                      className="w-full py-3 ms-2 text-sm font-medium cursor-pointer"
+                      className="w-full py-3 ms-2 font-medium cursor-pointer text-xl"
                     >
                       {action.tool}
                     </label>
@@ -161,7 +161,7 @@ function NewHirePage() {
       <br />
       {copiedTemplates.length === 0 ? null : (
         <form className="w-1/3 px-10" onSubmit={(e) => handleSubmit(e)}>
-          <label className="text-3xl">Suggest Change</label>
+          <label className="text-3xl">Suggest Changes</label>
 
           <ul className="mt-2.5 w-1/2 md:w-full text-sm font-medium text-white bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
             {copiedTemplates.map((action, index) => {
@@ -175,18 +175,19 @@ function NewHirePage() {
                 handleSetAction({ ...action, tool });
               }
 
-              function handleDeleteAction(e) {
-                console.log("delete");
+              function handleDeleteAction() {
+                // Need to make delete request in the backend
+                setCopiedTemplates((copiedTemplates) => copiedTemplates.filter((a) => a !== action));
               }
 
               return (
                 <li
                   key={index}
-                  className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 "
+                  className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600"
                 >
                   <div className="flex items-center px-3">
                     <input
-                      className="bg-transparent w-full active:outline-none py-3 ms-2 text-sm font-medium cursor-text"
+                      className="bg-transparent w-full active:outline-none py-3 ms-2 text-xl font-medium cursor-text"
                       value={action.tool}
                       onChange={(e) => handleActionChange(e.target.value)}
                     />
