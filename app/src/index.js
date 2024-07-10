@@ -2,15 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SignInPage from "./components/SignInPage";
 import DefaultPage from "./components/DefaultPage";
 import OwnerPage from "./components/OwnerPage";
 import NewHirePage from "./components/NewHire/NewHirePage";
-
 
 const router = createBrowserRouter([
   {
@@ -19,22 +15,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <DefaultPage />
+    element: <DefaultPage />,
   },
   {
     path: "/home/owner",
-    element: <OwnerPage />
+    element: <OwnerPage />,
   },
   {
     path: "/home/new-hire",
-    element: <NewHirePage />
-  }
+    element: <NewHirePage />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
 

@@ -11,7 +11,7 @@ function Welcome() {
 
   return (
     <main className={`flex flex-col justify-center min-h-screen`}>
-      <img 
+      <img
         alt="lilly scientist"
         src="https://cdn.thepharmaletter.com/files/2022/12/819984c0-74c3-11ed-8ccd-df2a7a949035-eli_lilly_science_large.jpg"
         className="opacity-50 fixed -z-10 w-screen h-screen blur-md"
@@ -24,10 +24,7 @@ function Welcome() {
       </div>
 
       <div className="pt-5 flex justify-center">
-        <Link
-          to={`${role}`}
-          className="border-[1px] p-2.5 rounded-2xl text-xl"
-        >
+        <Link to={`${role}`} className="border-[1px] p-2.5 rounded-2xl text-xl">
           Getting Started
         </Link>
       </div>
