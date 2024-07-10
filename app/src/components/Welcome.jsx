@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Welcome() {
-  const [visible, setVisible] = useState("");
+  const [role, setRole] = useState("");
 
-  function handleStartButton(e) {
-    setVisible("hidden");
-  }
+  // setRole should be based on result from fetch
+  useEffect(() => {
+    setRole("new-hire");
+  }, []);
 
   return (
-    <main className={`${visible} flex flex-col justify-center min-h-screen`}>
+    <main className={`flex flex-col justify-center min-h-screen`}>
       <img 
+        alt="lilly scientist"
         src="https://cdn.thepharmaletter.com/files/2022/12/819984c0-74c3-11ed-8ccd-df2a7a949035-eli_lilly_science_large.jpg"
         className="opacity-50 fixed -z-10 w-screen h-screen blur-md"
       />
@@ -21,12 +24,12 @@ function Welcome() {
       </div>
 
       <div className="pt-5 flex justify-center">
-        <button
+        <Link
+          to={`${role}`}
           className="border-[1px] p-2.5 rounded-2xl text-xl"
-          onClick={(e) => handleStartButton(e)}
         >
           Getting Started
-        </button>
+        </Link>
       </div>
     </main>
   );
