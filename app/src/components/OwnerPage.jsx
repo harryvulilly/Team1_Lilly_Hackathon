@@ -62,7 +62,7 @@ function OwnerPage() {
 
   function handleSendButton(e) {
     setButtonVisibility("hidden");
-    setSendText("Email successfully sent!");
+    setSendText("Email sent!");
   }
 
   const addItem = (item) => {
@@ -150,6 +150,7 @@ function OwnerPage() {
       <h2 className="text-2xl font-bold mb-4">Owner Page: Select Access</h2>
       <h3> Employee: {employee} </h3>
       <h3> Employee email: ellie.isnew@lilly.com </h3>
+      <h3> Employee start date: 07/15/2024 </h3>
       <h4>Instructions: Select technologies and preview what {employee} will see! </h4>
       <div className="flex flex-row">
         <div className="flex-1 mr-8">
@@ -245,7 +246,6 @@ function OwnerPage() {
         </div>
       </div>
       <div className="pt-5 flex justify-center">
-        {sendText}
         <div>
           {buttonVisibility === 'visible' && (
             <button
@@ -256,6 +256,8 @@ function OwnerPage() {
               Send
             </button>
           )} {buttonVisibility === 'hidden' && (<img src = {imageUrlSent} width={100} height={100} />)}
+          <div>        {sendText}
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ function Checklist({data, name}) {
   return (
     <div> Here's what {name} will see:
     <div className="checklist p-8 bg-white border border-gray-300 shadow-lg rounded-lg"> {/* Updated this line */}
-      <h2 className="text-2xl font-bold mb-4 text-black"> Onboarding Checklist</h2>
+      <h2 className="text-2xl font-bold mb-4 text-black"> {name}'s Onboarding Checklist</h2>
       
       <h3 className="text-xl font-bold mb-4 text-black"> Software Access</h3>
       <ul className="list-disc pl-8">
