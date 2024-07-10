@@ -24,7 +24,11 @@ function Checklist({data, name}) {
               />
               <strong>{key}</strong>
             </div>
-            <pre className="ml-4 whitespace-pre-wrap">{value}</pre>
+            <a href={value[1]} className="ml-4 text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+              {value[1]}
+            </a>
+            <pre className="ml-4 whitespace-pre-wrap">{value[0]}</pre>
+
           </li>
         ))}
       </ul>
