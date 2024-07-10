@@ -1,8 +1,8 @@
 function Navigation() {
   return (
-    <nav className="py-2.5 min-w-full flex bg-[#1c1e21] text-white text-xl">
+    <nav className="py-4 min-w-full flex bg-[#242526] text-white text-2xl">
       <div className="flex w-4/5">
-        <img 
+        <img
           src="https://dev.lilly.com/img/logo.svg"
           alt="Lilly Logo"
           width={50}
@@ -11,13 +11,8 @@ function Navigation() {
         />
         <h1 className="pr-5">New Employee Resources</h1>
       </div>
-
-      <ul className="flex w-2/6 justify-around">
-        <li>Owner</li>
-        <li>New Hires</li>
-      </ul>
     </nav>
-  )
+  );
 }
 
 export default Navigation;
