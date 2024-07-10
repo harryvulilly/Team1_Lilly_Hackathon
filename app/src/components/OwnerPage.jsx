@@ -64,7 +64,7 @@ function OwnerPage() {
 
   const filteredAdditionalOptions = searchTerm
     ? additionalOptions.filter((option) =>
-        option.toLowerCase().includes(searchTerm.toLowerCase())
+        option.toLowerCase().includes(searchTerm.toLowerCase()),
       )
     : [];
 

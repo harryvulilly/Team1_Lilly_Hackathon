@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navigation from "./components/Navigation";
 import Welcome from "./components/Welcome";
 import NewHirePage from "./components/NewHire/NewHirePage";
-import OwnerPage from "./components/OwnerPage"
+import OwnerPage from "./components/OwnerPage";
 
 function App() {
   const [role, setRole] = useState("");
